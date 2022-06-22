@@ -25,3 +25,11 @@ export async function getAlbums() {
 
   return response.data;
 }
+
+export async function getGames() {
+  const response = await client
+    .from('games')
+    .select('*');
+
+  return response.data;
+}
