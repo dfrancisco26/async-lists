@@ -16,3 +16,12 @@ export async function getBeers() {
 
   return response.data;
 }
+
+
+export async function getAlbums() {
+  const response = await client
+    .from('records')
+    .select('*');
+
+  return response.data;
+}
