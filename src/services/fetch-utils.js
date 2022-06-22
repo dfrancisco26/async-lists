@@ -7,3 +7,12 @@ export async function getOrkz() {
 
   return response.data;
 }
+
+
+export async function getBeers() {
+  const response = await client
+    .from('craft_beers')
+    .select('*');
+
+  return response.data;
+}
